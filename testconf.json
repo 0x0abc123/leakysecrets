@@ -1,0 +1,49 @@
+{
+	"spec": {
+		  "global": false,
+		  "replicas": 1,
+		  "ports": [],
+		  "env": [
+			"AwsAssumeRoleArn=",
+			"AwsAssumeRoleSessionName=",
+			"AwsS3ArchiveFolder=MSExport/Out/Archive/",
+			"AwsS3BucketName=payloads-dev",
+			"AwsS3RootFolder=MSExport/Out",
+			"FromAddress=",
+			"IsPgpEnabled=false",
+			"KafkaBrokers=b-1.fb89halsi.l1wncb.c2.kafka.ap-southeast-2.amazonaws.com:9096,b-2.f8b9halsi.l1wncb.c2.kafka.ap-southeast-2.amazonaws.com:9096,b-3.fb89halsi.l1wncb.c2.kafka.ap-southeast-2.amazonaws.com:9096",
+			"KafkaGroupId=nvd-master-data-consumer-dev",
+			"KafkaProducerClientId=nvd-master-data-consumer-dev",
+			"KafkaSaslPassword=f9e13ee6-7e87-4bc8-ba77-d0257b957a39",
+			"KafkaSaslUsername=kfku",
+			"KafkaTopic=event.au.nvd.master-data-extract",
+			"PgpPublicKeyPath=",
+			"RecipientsAddress=",
+			"ServiceId=msexport",
+			"SftpFolderPath=incoming",
+			"SftpHostName=s10.redacbvub.com",
+			"SftpPassword=U>wD&U4%PdT6m&",
+			"SftpPort=22",
+			"SftpPrivateKeyPath=",
+			"SftpUserName=FtpTest",
+			"SmtpHost=",
+			"token=elI3fUN2Jk1EQ2xXOHhPMlNXLjFNX0ZsPmwhWCpyY3MK"
+		  ],
+		  "placement": {
+			"constraints": [
+			  "node.labels.compute_type==general-purpose"
+			],
+			"preferences": []
+		  },
+		  "resources": {
+			"reservations": {
+			  "nanoCPUs": 10000000,
+			  "memoryBytes": 209715200
+			},
+			"limits": {
+			  "nanoCPUs": 500000000,
+			  "memoryBytes": 1073741824
+			}
+		  }
+	}
+}
